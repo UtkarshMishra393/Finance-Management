@@ -2,6 +2,7 @@ const User = require('../models/user.model')
 // bcryptjs is the npm package used for hashing the passwords
 const bcryptjs = require("bcryptjs");
 
+
 const signup = async (req, res, next) => {
     const { username, email, password } = req.body;
     const hashedPassword = bcryptjs.hashSync(password, 10);
